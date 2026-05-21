@@ -301,66 +301,10 @@ export default function App() {
 
           {activatePage === "visualisierungen" && (
             <>
-              <h2>Sonstige</h2>
-
-              {standorte.length === 0 ? (
-                <p style={{ color: "red" }}>
-                  Keine Standorte geladen. Prüfe: {API_BASE}/analysis/standorte
-                </p>
-              ) : (
-                <label>
-                  Standort:{" "}
-                  <select
-                    value={selectedStandort}
-                    onChange={(e) => setSelectedStandort(e.target.value)}
-                  >
-                    {standorte.map((s) => (
-                      <option key={s} value={s}>
-                        {s}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              )}
-
-              <div style={{ marginTop: "16px" }}>
-                {analysisLoading && <p>Analyse wird geladen...</p>}
-
-                {analysisError && (
-                  <p style={{ color: "red" }}>
-                    Fehler bei der Analyse: {analysisError}
-                  </p>
-                )}
-
-                {!analysisLoading && !analysisError && analyseResult && (
-                  <>
-                    <h3>Ergebnis</h3>
-
-                    <p>
-                      Erwachsene nach links:{" "}
-                      <strong>{analyseResult.adult_ltr}</strong>
-                    </p>
-
-                    <p>
-                      Erwachsene nach rechts:{" "}
-                      <strong>{analyseResult.adult_rtl}</strong>
-                    </p>
-
-                    <p>
-                      Ergebnis:{" "}
-                      <strong>
-                        {analyseResult.more_to_right
-                          ? "Mehr Erwachsene gehen nach rechts."
-                          : "Mehr Erwachsene gehen nach links oder gleich viele."}
-                      </strong>
-                    </p>
-                  </>
-                )}
-              </div>
-
-              <h3>Zeitreihe</h3>
-
-              <VegaTimeseries standort={selectedStandort} />
+              <p>
+                Die Ergebnisse der Analyse werden als 2D-Karten visualisiert
+              </p>
+              <Testkarte />
             </>
           )}
         </main>
