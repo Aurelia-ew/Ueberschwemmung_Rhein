@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import VegaTimeseries from "./components/VegaTimeseries";
 import VegaFokusLast7All from "./components/VegaFokusLast7All";
 import "./App.css";
+import Testkarte from "./components/testkarte";
 
 const API_BASE = "/api";
 
@@ -233,7 +234,14 @@ export default function App() {
             </>
           )}
 
-          {activatePage === "visualisierungen" && <></>}
+          {activatePage === "visualisierungen" && (
+            <>
+              <p>
+                Die Ergebnisse der Analyse werden als 2D-Karten visualisiert
+              </p>
+              <Testkarte />
+            </>
+          )}
         </main>
       </div>
     </div>
