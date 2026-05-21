@@ -39,7 +39,7 @@ Die Resultate werden als 2D-Karten visualisiert.
 - GeoPandas
 - Rasterio
 - Matplotlib
-- QGIS <-------------------------------- evtl. löschen
+- QGIS (Überprüfung)
 - Folium
 
 ## Datenquellen
