@@ -186,45 +186,50 @@ export default function App() {
 
           {activatePage === "daten" && (
             <>
-              <h2>Daten</h2>
-              <p>Ein kleiner Ausschnitt der Daten:</p>
+              <h2>Datengrundlagen</h2>
 
-              {loading && <p>Daten werden geladen...</p>}
+              <p>
+                Für die Analyse der potenziellen Überschwemmungsgebiete werden
+                verschiedene Geodaten verwendet.
+              </p>
 
-              {error && (
-                <p style={{ color: "red" }}>
-                  Fehler beim Laden der Daten: {error}
-                </p>
-              )}
+              <ul className="list-disc ml-6 space-y-4">
+                <li>
+                  <strong>OpenStreetMap (OSM)</strong>
+                  <p>
+                    Nutzung für Gebäude, Strassen, Infrastruktur und
+                    Gewässergeometrien.
+                  </p>
+                </li>
 
-              {!loading && !error && (
-                <>
-                  <p>Zeilen im Preview: {rows.length}</p>
+                <li>
+                  <strong>swisstopo swissALTI3D</strong>
+                  <p>
+                    Digitales Höhenmodell der Schweiz zur Berechnung
+                    potenzieller Überflutungsflächen.
+                  </p>
+                </li>
 
-                  {rows.length > 0 ? (
-                    <table className="data-table">
-                      <thead>
-                        <tr>
-                          {Object.keys(rows[0]).map((key) => (
-                            <th key={key}>{key}</th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {rows.map((row, index) => (
-                          <tr key={index}>
-                            {Object.keys(rows[0]).map((key) => (
-                              <td key={key}>{row[key]}</td>
-                            ))}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  ) : (
-                    <p>Keine Daten gefunden.</p>
-                  )}
-                </>
-              )}
+                <li>
+                  <strong>Rhein-Geometrie</strong>
+                  <p>
+                    Nutzung als Ausgangsfläche für die Hochwassersimulation.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Verwaltungsgrenzen und Hintergrundkarten</strong>
+                  <p>Zur Orientierung und Visualisierung der Resultate.</p>
+                </li>
+              </ul>
+
+              <h3>Datenverarbeitung</h3>
+
+              <p>
+                Die Daten werden in einem GIS verarbeitet und analysiert. Dabei
+                werden Flächen identifiziert, die unterhalb des definierten
+                Wasserstands liegen und räumlich mit dem Rhein verbunden sind.
+              </p>
             </>
           )}
 
