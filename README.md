@@ -39,7 +39,7 @@ Die Resultate werden als 2D-Karten visualisiert.
 - GeoPandas
 - Rasterio
 - Matplotlib
-- QGIS <-------------------------------- evtl. löschen
+- QGIS (Überprüfung)
 - Folium
 
 ## Datenquellen
@@ -50,7 +50,7 @@ Die Resultate werden als 2D-Karten visualisiert.
 - OpenStreetMap (OSM)
 - swisstopo
 
-## Projektstruktur <----------------------- Änderungen vorbehalten
+## Projektstruktur <------------------ Änderungen vorbehalten
 
 ```text
 UEBERSCHWEMMUNG_RHEIN/
