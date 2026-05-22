@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import VegaTimeseries from "./components/VegaTimeseries";
-import VegaFokusLast7All from "./components/VegaFokusLast7All";
 import "./App.css";
 import Testkarte from "./components/testkarte";
 
@@ -165,7 +163,7 @@ export default function App() {
             className="sidebar-button"
             onClick={() => setActivatePage("uebersicht")}
           >
-            Hauptmenü
+            Übersicht
           </button>
 
           <button
@@ -177,9 +175,9 @@ export default function App() {
 
           <button
             className="sidebar-button"
-            onClick={() => setActivatePage("visualisierungen")}
+            onClick={() => setActivatePage("historie")}
           >
-            Sonstige
+            Historie
           </button>
         </div>
       </aside>
@@ -206,16 +204,6 @@ export default function App() {
                 betrachtet. Die Resultate werden als 2D-Karten visualisiert.
               </p>
 
-              <h3>Übersichtskarte des Untersuchungsgebiets</h3>
-
-              <VegaFokusLast7All />
-
-              <p style={{ marginTop: "10px", opacity: 0.9 }}>Datenquellen:</p>
-            </>
-          )}
-
-          {activatePage === "daten" && (
-            <>
               <h2>Datengrundlagen</h2>
 
               <p>
@@ -261,48 +249,22 @@ export default function App() {
                 Wasserstands liegen und räumlich mit dem Rhein verbunden sind.
               </p>
 
-              {loading && <p>Daten werden geladen...</p>}
-
-              {error && (
-                <p style={{ color: "red" }}>
-                  Fehler beim Laden der Daten: {error}
-                </p>
-              )}
-
-              {!loading && !error && rows.length > 0 && (
-                <>
-                  <h3>Datenvorschau</h3>
-
-                  <table className="data-table">
-                    <thead>
-                      <tr>
-                        {Object.keys(rows[0]).map((key) => (
-                          <th key={key}>{key}</th>
-                        ))}
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      {rows.map((row, index) => (
-                        <tr key={index}>
-                          {Object.keys(rows[0]).map((key) => (
-                            <td key={key}>{row[key]}</td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </>
-              )}
+              <p style={{ marginTop: "10px", opacity: 0.9 }}>Datenquellen:</p>
             </>
           )}
 
-          {activatePage === "visualisierungen" && (
+          {activatePage === "daten" && (
             <>
               <p>
                 Die Ergebnisse der Analyse werden als 2D-Karten visualisiert
               </p>
               <Testkarte />
+            </>
+          )}
+
+          {activatePage === "historie" && (
+            <>
+              <p>test</p>
             </>
           )}
         </main>
