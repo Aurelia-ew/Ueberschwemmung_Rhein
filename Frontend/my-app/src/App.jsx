@@ -87,17 +87,19 @@ export default function App() {
                     potenzieller Überflutungsflächen.
                   </p>
                 </li>
+                <li>
+                  <strong>swisstopo swissTLM3D</strong>
+                  <p>
+                    Topografisches Landschaftsmodell für detaillierte
+                    Informationen zu Gebäuden, Strassen und Gewässern.
+                  </p>
+                </li>
 
                 <li>
                   <strong>Rhein-Geometrie</strong>
                   <p>
                     Nutzung als Ausgangsfläche für die Hochwassersimulation.
                   </p>
-                </li>
-
-                <li>
-                  <strong>Verwaltungsgrenzen und Hintergrundkarten</strong>
-                  <p>Zur Orientierung und Visualisierung der Resultate.</p>
                 </li>
               </ul>
 
@@ -107,9 +109,8 @@ export default function App() {
                 Die Daten werden in einem GIS verarbeitet und analysiert. Dabei
                 werden Flächen identifiziert, die unterhalb des definierten
                 Wasserstands liegen und räumlich mit dem Rhein verbunden sind.
+                Zusätzlich wurden im QGIS die Ergebnisse geprüft.
               </p>
-
-              <p style={{ marginTop: "10px", opacity: 0.9 }}>Datenquellen:</p>
             </>
           )}
 
@@ -141,8 +142,8 @@ export default function App() {
               <h2>Historische Hochwasserereignisse am Rhein in Basel</h2>
 
               <p>
-                Der Rhein prägt Basel seit Jahrhunderten - gleichzeitig stellt
-                er bei Hochwasser eine erhebliche Gefahr dar. Die folgende
+                Der Rhein prägt Basel seit Jahrhunderten. Gleichzeitig stellt er
+                bei Hochwasser eine erhebliche Gefahr dar. Die folgende
                 Übersicht zeigt bedeutende historische Hochwasserereignisse in
                 Basel und entlang des Oberrheins.
               </p>
@@ -153,8 +154,8 @@ export default function App() {
                 Im Juli 2021 führte der Rhein nach tagelangem Starkregen
                 deutlich Hochwasser. In Basel wurden Rheinufer gesperrt, die
                 Schifffahrt teilweise eingestellt und die Strömung war extrem
-                stark. Der Pegel erreichte einen der höchsten Werte der letzten
-                Jahrzehnte.
+                stark. Der Pegel lag bei gut 8 Metern und damit rund 5 Meter
+                über dem üblichen Normalpegel von etwa 2 bis 4 Metern.
               </p>
 
               <div
@@ -225,9 +226,12 @@ export default function App() {
 
               <p>
                 Das Hochwasser vom Mai 1999 zählt zu den bedeutendsten modernen
-                Rhein-Hochwassern in Basel. Feuerwehr, Polizei und Zivilschutz
-                standen während rund zwei Wochen im Dauereinsatz. Der Rhein
-                überschritt kritische Marken deutlich.
+                Rhein-Hochwassern in Basel. Der Pegel erreichte rund 8.9 Meter
+                und lag damit etwa 5 bis 7 Meter über dem üblichen Normalpegel
+                des Rheins. Feuerwehr, Polizei, Zivilschutz und weitere
+                Einsatzkräfte standen während rund zwei Wochen im Dauereinsatz.
+                Uferbereiche wurden gesperrt, Schutzmassnahmen aufgebaut und die
+                Bevölkerung laufend informiert.
               </p>
 
               <div
@@ -253,8 +257,11 @@ export default function App() {
 
               <p>
                 1994 wurde das damals angenommene 100-jährliche Hochwasser am
-                Rhein in Basel überschritten. Dieses Ereignis zeigte, dass die
-                bisherigen Hochwassermodelle teilweise zu tief angesetzt waren.
+                Rhein in Basel überschritten. Der Pegel erreichte rund 7 bis 8
+                Meter und lag damit mehrere Meter über dem normalen Rheinstand.
+                Das Ereignis zeigte, dass die bisherigen Hochwassermodelle
+                teilweise zu tief angesetzt waren und der Rhein deutlich höhere
+                Wasserstände erreichen kann als zuvor angenommen.
               </p>
 
               <div
@@ -279,9 +286,13 @@ export default function App() {
               <strong>1978 - Starkes Hochwasser</strong>
 
               <p>
-                1978 kam es zu einem grossen Rheinhochwasser in Basel. Das
-                Ereignis wird oft zusammen mit 1994 und 1999 als Referenz für
-                moderne Hochwasseranalysen verwendet.
+                1978 kam es zu einem grossen Rheinhochwasser in Basel. Der Pegel
+                erreichte deutlich erhöhte Werte und lag mehrere Meter über dem
+                normalen Rheinstand. Uferbereiche entlang des Rheins wurden
+                teilweise gesperrt und die starke Strömung stellte eine Gefahr
+                für die Schifffahrt dar. Das Ereignis wird bis heute zusammen
+                mit den Hochwassern von 1994 und 1999 als Referenz für moderne
+                Hochwasseranalysen verwendet.
               </p>
 
               <div
@@ -308,8 +319,11 @@ export default function App() {
               <p>
                 Am 16. Juni 1910 trat der Rhein in Basel über die Ufer.
                 Besonders das Kleinbasel war betroffen, wo Wasser bis auf die
-                Strassen gelangte. Historische Bilder zeigen überflutete
-                Rheinwege und Brückenbereiche.
+                Strassen und Promenaden gelangte. Historische Bilder zeigen
+                überflutete Rheinwege, Brückenbereiche und zahlreiche
+                Schaulustige entlang des Flusses. Der Rhein erreichte einen
+                aussergewöhnlich hohen Wasserstand und lag mehrere Meter über
+                dem normalen Rheinpegel.
               </p>
 
               <div
@@ -382,7 +396,11 @@ export default function App() {
               <p>
                 Die Hochwasser von 1882 und 1883 verursachten grosse Schäden
                 entlang des Oberrheins und beeinflussten später den Ausbau des
-                Hochwasserschutzes auch in Basel und Umgebung.
+                Hochwasserschutzes auch in Basel und Umgebung. Zahlreiche
+                Uferbereiche, Brücken und Verkehrswege wurden beschädigt oder
+                überflutet. Die Ereignisse zeigten, wie stark extreme
+                Rhein-Hochwasser ganze Regionen entlang des Oberrheins
+                beeinflussen können.
               </p>
 
               <div
