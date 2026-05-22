@@ -1,153 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 import Testkarte from "./components/testkarte";
 import Hochwasser1910 from "./assets/Hochwasser_1910.jpg";
 import Hochwasser2021 from "./assets/Hochwasser_2021.jpg";
 
-const API_BASE = "/api";
-
-async function fetchJson(url, timeoutMs = 120000) {
-  const controller = new AbortController();
-  const t = setTimeout(() => controller.abort(), timeoutMs);
-
-  try {
-    const res = await fetch(url, {
-      signal: controller.signal,
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status} bei ${url}`);
-    }
-
-    return await res.json();
-  } catch (e) {
-    if (e.name === "AbortError") {
-      throw new Error(`Timeout nach ${timeoutMs}ms bei ${url}`, { cause: e });
-    }
-
-    throw e;
-  } finally {
-    clearTimeout(t);
-  }
-}
-
 export default function App() {
-  const [rows, setRows] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
   const [activatePage, setActivatePage] = useState("uebersicht");
-
-  const [standorte, setStandorte] = useState([]);
-  const [selectedStandort, setSelectedStandort] = useState("");
-  const [analyseResult, setAnalyseResult] = useState(null);
-  const [analysisLoading, setAnalysisLoading] = useState(false);
-  const [analysisError, setAnalysisError] = useState(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadPreview() {
-      setLoading(true);
-      setError(null);
-
-      try {
-        const data = await fetchJson(`${API_BASE}/daten/preview`, 30000);
-
-        if (cancelled) return;
-
-        setRows(Array.isArray(data) ? data : []);
-      } catch (e) {
-        if (cancelled) return;
-
-        console.error("Fehler beim Laden der Daten:", e);
-        setError(e.message || "Fehler beim Laden");
-      } finally {
-        if (!cancelled) {
-          setLoading(false);
-        }
-      }
-    }
-
-    loadPreview();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadStandorte() {
-      setAnalysisError(null);
-
-      try {
-        const data = await fetchJson(`${API_BASE}/analysis/standorte`, 30000);
-
-        if (cancelled) return;
-
-        const list = Array.isArray(data) ? data : [];
-        setStandorte(list);
-
-        if (list.length > 0) {
-          setSelectedStandort(list[0]);
-        }
-      } catch (e) {
-        if (cancelled) return;
-
-        console.error("Fehler beim Laden der Standorte:", e);
-        setStandorte([]);
-        setSelectedStandort("");
-        setAnalysisError(e.message || "Standorte konnten nicht geladen werden");
-      }
-    }
-
-    loadStandorte();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!selectedStandort) return;
-
-    let cancelled = false;
-
-    async function loadAnalyse() {
-      setAnalysisLoading(true);
-      setAnalysisError(null);
-      setAnalyseResult(null);
-
-      const url = `${API_BASE}/analysis/erwachsene/${encodeURIComponent(
-        selectedStandort,
-      )}`;
-
-      try {
-        const data = await fetchJson(url, 120000);
-
-        if (cancelled) return;
-
-        setAnalyseResult(data);
-      } catch (e) {
-        if (cancelled) return;
-
-        setAnalysisError(e.message || "Analyse konnte nicht geladen werden");
-      } finally {
-        if (!cancelled) {
-          setAnalysisLoading(false);
-        }
-      }
-    }
-
-    loadAnalyse();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [selectedStandort]);
 
   return (
     <div className="app">
@@ -257,9 +115,12 @@ export default function App() {
 
           {activatePage === "visualisierungen" && (
             <>
+              <h2>Visualisierungen</h2>
+
               <p>
-                Die Ergebnisse der Analyse werden als 2D-Karten visualisiert
+                Die Ergebnisse der Analyse werden als 2D-Karten visualisiert.
               </p>
+
               <p
                 style={{
                   fontSize: "13px",
@@ -270,6 +131,7 @@ export default function App() {
                 * Die Wasserhöhe bezieht sich auf den aktuellen Pegel des Rheins
                 addiert mit der eingestellten Anstiegsmenge in der Checkboxs.
               </p>
+
               <Testkarte />
             </>
           )}
@@ -284,7 +146,9 @@ export default function App() {
                 Übersicht zeigt bedeutende historische Hochwasserereignisse in
                 Basel und entlang des Oberrheins.
               </p>
+
               <strong>2021 - Hochwasser am Rhein in Basel</strong>
+
               <p>
                 Im Juli 2021 führte der Rhein nach tagelangem Starkregen
                 deutlich Hochwasser. In Basel wurden Rheinufer gesperrt, die
@@ -292,6 +156,7 @@ export default function App() {
                 stark. Der Pegel erreichte einen der höchsten Werte der letzten
                 Jahrzehnte.
               </p>
+
               <div
                 style={{
                   marginTop: "12px",
@@ -336,6 +201,7 @@ export default function App() {
                   </a>
                 </p>
               </div>
+
               <div
                 style={{
                   marginTop: "10px",
@@ -354,6 +220,7 @@ export default function App() {
                   SRF - Hochwasser Basel (16.07.2021)
                 </a>
               </div>
+
               <strong>1999 - Jahrhunderthochwasser in Basel</strong>
 
               <p>
@@ -444,6 +311,7 @@ export default function App() {
                 Strassen gelangte. Historische Bilder zeigen überflutete
                 Rheinwege und Brückenbereiche.
               </p>
+
               <div
                 style={{
                   marginTop: "12px",
@@ -489,6 +357,7 @@ export default function App() {
                   </a>
                 </p>
               </div>
+
               <div
                 style={{
                   marginTop: "10px",
