@@ -170,7 +170,7 @@ export default function App() {
 
           <button
             className="sidebar-button"
-            onClick={() => setActivatePage("daten")}
+            onClick={() => setActivatePage("visualisierungen")}
           >
             Visualisierungen
           </button>
@@ -255,10 +255,20 @@ export default function App() {
             </>
           )}
 
-          {activatePage === "daten" && (
+          {activatePage === "visualisierungen" && (
             <>
               <p>
                 Die Ergebnisse der Analyse werden als 2D-Karten visualisiert
+              </p>
+              <p
+                style={{
+                  fontSize: "13px",
+                  opacity: 0.75,
+                  marginTop: "10px",
+                }}
+              >
+                * Die Wasserhöhe bezieht sich auf den aktuellen Pegel des Rheins
+                addiert mit der eingestellten Anstiegsmenge in der Checkboxs.
               </p>
               <Testkarte />
             </>
@@ -298,7 +308,24 @@ export default function App() {
                     marginTop: "6px",
                   }}
                 >
-                  Hochwasser am Rhein in Basel im Juli 2021. Quelle: BaZ
+                  Hochwasser am Rhein in Basel im Juli 2021.
+                </p>
+
+                <p
+                  style={{
+                    fontSize: "12px",
+                    opacity: 0.65,
+                    marginTop: "4px",
+                  }}
+                >
+                  Bildquelle:{" "}
+                  <a
+                    href="https://www.bazonline.ch/immense-wassermassen-stroemen-durch-die-region-243725433523"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    BAZ Online - Immense Wassermassen strömen durch die Region
+                  </a>
                 </p>
               </div>
               <div
@@ -434,10 +461,26 @@ export default function App() {
                   }}
                 >
                   Historische Aufnahme des Hochwassers in Basel im Jahr 1910.
-                  Quelle: Prime News
+                </p>
+
+                <p
+                  style={{
+                    fontSize: "12px",
+                    opacity: 0.65,
+                    marginTop: "4px",
+                  }}
+                >
+                  Bildquelle:{" "}
+                  <a
+                    href="https://primenews.ch/news/2019/02/die-hochwasser-des-rheins-den-letzten-jahrhunderten"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Prime News - Die Hochwasser des Rheins in den letzten
+                    Jahrhunderten
+                  </a>
                 </p>
               </div>
-
               <div
                 style={{
                   marginTop: "10px",
