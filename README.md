@@ -61,12 +61,17 @@ UEBERSCHWEMMUNG_RHEIN/
 │   │   ├── Berechnung_Ueberschwemmung.ipynb
 │   │   └── Filterung_Rhein.ipynb
 │   │
-│   └── Data/
-│       └── Hoehenmodell/
-│           ├── swissalti3d_2025_2610-1267_0.5_2056_5728.tif
-│           ├── swissalti3d_2025_2610-1268_0.5_2056_5728.tif
-│           ├── swissalti3d_2025_2610-1269_0.5_2056_5728.tif
-│           └── ...
+│   ├── Data/
+│   |   └── Hoehenmodell/
+│   |       ├── swissalti3d_2025_2610-1267_0.5_2056_5728.tif
+│   |       ├── swissalti3d_2025_2610-1268_0.5_2056_5728.tif
+│   |       ├── swissalti3d_2025_2610-1269_0.5_2056_5728.tif
+│   |       └── ...
+|   └── Karten/
+│           └── Kartenbeispiele.py
+|
+|
+|
 │
 ├── Frontend/
 │   └── my-app/

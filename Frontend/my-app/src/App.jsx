@@ -152,7 +152,11 @@ export default function App() {
   return (
     <div className="app">
       <aside className="sidebar">
-        <img src="/logo-fhnw.png" className="sidebar-logo" alt="FHNW Logo" />
+        <img
+          src="/Logo_Projekt_Hackaton.png"
+          className="sidebar-logo"
+          alt="Logo Überschwemmung Simulation"
+        />
 
         <h1 className="sidebar-title">Menü:</h1>
 
@@ -183,12 +187,6 @@ export default function App() {
       <div className="right-side">
         <header className="page-header">
           <h1>Wer ist betroffen, wenn der Rheinpegel steigt?</h1>
-
-          <img
-            src="/Logo_Projekt_Hackaton.png"
-            alt="Logo Überschwemmung Simulation"
-            className="header-project-logo"
-          />
         </header>
 
         <main className="main">
