@@ -143,7 +143,7 @@ export default function App() {
 
               <p>
                 Der Rhein prägt Basel seit Jahrhunderten. Gleichzeitig stellt er
-                bei Hochwasser eine erhebliche Gefahr dar. Die folgende
+                bei Hochwasser eine potenzielle Gefahr dar. Die folgende
                 Übersicht zeigt bedeutende historische Hochwasserereignisse in
                 Basel und entlang des Oberrheins.
               </p>
