@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Testkarte from "./components/testkarte";
+import Karte from "./components/karte";
 import Hochwasser1910 from "./assets/Hochwasser_1910.jpg";
 import Hochwasser2021 from "./assets/Hochwasser_2021.jpg";
 
@@ -75,30 +75,45 @@ export default function App() {
                 <li>
                   <strong>OpenStreetMap (OSM)</strong>
                   <p>
-                    Nutzung für Gebäude, Strassen, Infrastruktur und
-                    Gewässergeometrien.
+                    Dient als Hintergrundkarte. Zusätzlich werden die Gebäude für die Karte extrahiert und als separate Layer dargestellt.
+                  </p>
+                  <p>
+                    <a
+                        href="https://www.openstreetmap.org/#map=8/46.825/8.224"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Hier gehts zu OpenStreetMap
+                    </a>
                   </p>
                 </li>
 
                 <li>
                   <strong>swisstopo swissALTI3D</strong>
                   <p>
-                    Digitales Höhenmodell der Schweiz zur Berechnung
-                    potenzieller Überflutungsflächen.
+                    Ist die Grundlage zur Berechnung des Überschwemmungsgebiet. Auf diesen Daten werden die Berechnungen anhand des Bathtub Models druchgeführt.
+                  </p>
+                  <p>
+                    <a
+                        href="https://www.swisstopo.admin.ch/de/hoehenmodell-swissalti3d"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Hier gehts zu swissALTI3D
+                    </a>
                   </p>
                 </li>
                 <li>
                   <strong>swisstopo swissTLM3D</strong>
                   <p>
-                    Topografisches Landschaftsmodell mit detaillierten
-                    Informationen zu Gewässern.
+                    Aus diesem Datensatz wird die Rheingeometie (Polygon) extrahiert. 
+                    Diese dient als Perimeter für die Hochwassersimulation
                   </p>
-                </li>
-
-                <li>
-                  <strong>Rhein-Geometrie</strong>
                   <p>
-                    Nutzung als Ausgangsfläche für die Hochwassersimulation.
+                    <a
+                        href="https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Hier gehts zu swissTLM3D
+                    </a>
                   </p>
                 </li>
               </ul>
@@ -112,6 +127,7 @@ export default function App() {
                 liegen und räumlich mit dem Rhein verbunden sind. Anschliessend
                 werden die Ergebnisse als Layer auf einer OpenStreetMap-Karte
                 überlagert und visualisiert.
+                Für die Datenverabeitung wurden die Bibliotheken rasterio, Geopandas, und numpy verwendet.
               </p>
             </>
           )}
@@ -131,11 +147,10 @@ export default function App() {
                   marginTop: "10px",
                 }}
               >
-                * Die Wasserhöhe bezieht sich auf den aktuellen Pegel des Rheins
-                addiert mit der eingestellten Anstiegsmenge in der Checkboxs.
+                * Die Wasserhöhe bezieht sich auf die Wasseroberfläche im Höhenmodell swissALTI3D. Normalerweise beträgt der Rheinpegel 2 - 4 Meter (Wassertiefe vom Grund bis zur Wasseroberfläche).
               </p>
 
-              <Testkarte />
+              <Karte />
             </>
           )}
 

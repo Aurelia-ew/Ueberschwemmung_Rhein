@@ -1,4 +1,4 @@
-function Testkarte() {
+function Karte() {
   return (
     <iframe
       src="/Karte_ueberflutungsgebiet.html"
@@ -10,4 +10,4 @@ function Testkarte() {
   );
 }
 
-export default Testkarte;
+export default Karte;
