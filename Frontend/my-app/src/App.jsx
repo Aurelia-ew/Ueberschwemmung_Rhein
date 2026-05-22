@@ -44,7 +44,7 @@ export default function App() {
 
       <div className="right-side">
         <header className="page-header">
-          <h1>Wer ist betroffen, wenn der Rheinpegel steigt?</h1>
+          <h1>Wer und Was ist betroffen, wenn der Rheinpegel steigt?</h1>
         </header>
 
         <main className="main">
