@@ -91,7 +91,7 @@ export default function App() {
                   <strong>swisstopo swissTLM3D</strong>
                   <p>
                     Topografisches Landschaftsmodell für detaillierte
-                    Informationen Gewässern.
+                    Informationen zu Gewässern.
                   </p>
                 </li>
 
