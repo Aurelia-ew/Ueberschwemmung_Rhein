@@ -276,6 +276,14 @@ export default function App() {
 
           {activatePage === "historie" && (
             <>
+              <h2>Historische Hochwasserereignisse am Rhein in Basel</h2>
+
+              <p>
+                Der Rhein prägt Basel seit Jahrhunderten - gleichzeitig stellt
+                er bei Hochwasser eine erhebliche Gefahr dar. Die folgende
+                Übersicht zeigt bedeutende historische Hochwasserereignisse in
+                Basel und entlang des Oberrheins.
+              </p>
               <strong>2021 - Hochwasser am Rhein in Basel</strong>
               <p>
                 Im Juli 2021 führte der Rhein nach tagelangem Starkregen
