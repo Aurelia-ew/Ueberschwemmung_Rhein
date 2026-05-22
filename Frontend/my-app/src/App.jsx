@@ -264,7 +264,86 @@ export default function App() {
 
           {activatePage === "historie" && (
             <>
-              <p>test</p>
+              <strong>2021 - Hochwasser am Rhein in Basel</strong>
+              <p>
+                Im Juli 2021 führte der Rhein nach tagelangem Starkregen
+                deutlich Hochwasser. In Basel wurden Rheinufer gesperrt, die
+                Schifffahrt teilweise eingestellt und die Strömung war extrem
+                stark. Der Pegel erreichte einen der höchsten Werte der letzten
+                Jahrzehnte.
+              </p>
+              <strong>1999 - Jahrhunderthochwasser in Basel</strong>
+              <p>
+                Das Hochwasser vom Mai 1999 zählt zu den bedeutendsten modernen
+                Rhein-Hochwassern in Basel. Feuerwehr, Polizei und Zivilschutz
+                standen während rund zwei Wochen im Dauereinsatz. Der Rhein
+                überschritt kritische Marken deutlich.
+              </p>
+              <strong>1994 - Sehr grosses Rheinhochwasser</strong>
+              <p>
+                1994 wurde das damals angenommene 100-jährliche Hochwasser am
+                Rhein in Basel überschritten. Dieses Ereignis zeigte, dass die
+                bisherigen Hochwassermodelle teilweise zu tief angesetzt waren.
+              </p>
+
+              <strong>1978 - Starkes Hochwasser</strong>
+              <p>
+                1978 kam es zu einem grossen Rheinhochwasser in Basel. Das
+                Ereignis wird oft zusammen mit 1994 und 1999 als Referenz für
+                moderne Hochwasseranalysen verwendet.
+              </p>
+              <strong>1910 - Rhein tritt in Basel über die Ufer</strong>
+              <p>
+                Am 16. Juni 1910 trat der Rhein in Basel über die Ufer.
+                Besonders das Kleinbasel war betroffen, wo Wasser bis auf die
+                Strassen gelangte. Historische Bilder zeigen überflutete
+                Rheinwege und Brückenbereiche
+              </p>
+              <strong>1882 / 1883 - Grosses Oberrhein-Hochwasser</strong>
+              <p>
+                Die Hochwasser von 1882 und 1883 verursachten grosse Schäden
+                entlang des Oberrheins und beeinflussten später den Ausbau des
+                Hochwasserschutzes auch in Basel und Umgebung.
+              </p>
+              <strong>1852 - Höchststand des Rheins in Basel</strong>
+              <p>
+                1852 erreichte der Rhein in Basel laut historischen
+                Rekonstruktionen einen extrem hohen Pegel. Dieses Ereignis gilt
+                als eines der stärksten bekannten Hochwasser der letzten rund
+                500 Jahre am Basler Rhein.
+              </p>
+              <strong>1817 - Schweres Hochwasser am Rhein</strong>
+              <p>
+                1817 wurde in Basel ein aussergewöhnlich hoher Rheinstand
+                registriert. Das Ereignis gehört zu den wichtigsten historischen
+                Hochwassern des Oberrheins.
+              </p>
+              <strong>1784 - Extremes Hochwasser nach Schneeschmelze</strong>
+              <p>
+                Nach einem sehr kalten Winter führte rasche Schneeschmelze 1784
+                zu schweren Überschwemmungen entlang des Rheins. Auch Basel war
+                betroffen.
+              </p>
+              <strong>1566 - Rhein- und Bodenseehochwasser</strong>
+              <p>
+                1566 kam es zu einem grossen Hochwasserereignis im gesamten
+                Oberrheinraum. Historische Berichte erwähnen zerstörte Brücken
+                und Überschwemmungen entlang des Rheins bis Basel.
+              </p>
+              <strong>1480 - Magdalenenhochwasser</strong>
+              <p>
+                Das Magdalenenhochwasser von 1480 gilt als eine der grössten
+                Hochwasserkatastrophen der Schweizer Geschichte. In Basel lag
+                der Höhepunkt des Hochwassers am 24. Juli. Zahlreiche
+                Rheinbrücken zwischen Bern und Strassburg wurden zerstört.
+              </p>
+              <strong>1342 - Mittelalterliche «Jahrtausendflut»</strong>
+              <p>
+                Das Hochwasser von 1342 zählt zu den extremsten bekannten
+                Überschwemmungen Mitteleuropas. Auch der Rhein bei Basel war
+                betroffen. Historiker sprechen teilweise von einer
+                «Jahrtausendflut».
+              </p>
             </>
           )}
         </main>
