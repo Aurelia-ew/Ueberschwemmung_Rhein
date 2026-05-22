@@ -106,10 +106,12 @@ export default function App() {
               <h3>Datenverarbeitung</h3>
 
               <p>
-                Die Daten werden in einem GIS verarbeitet und analysiert. Dabei
-                werden Flächen identifiziert, die unterhalb des definierten
-                Wasserstands liegen und räumlich mit dem Rhein verbunden sind.
-                Zusätzlich wurden im QGIS die Ergebnisse geprüft.
+                Die potenziellen Überschwemmungsflächen werden in einem Jupyter
+                Notebook berechnet und definiert. Dabei werden Flächen
+                identifiziert, die unterhalb des festgelegten Wasserstands
+                liegen und räumlich mit dem Rhein verbunden sind. Anschliessend
+                werden die Ergebnisse als Layer auf einer OpenStreetMap-Karte
+                überlagert und visualisiert.
               </p>
             </>
           )}
